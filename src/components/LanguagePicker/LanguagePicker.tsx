@@ -5,11 +5,11 @@ export const LanguagePicker = () => {
   const { language, setLanguage } = useContext(LanguageContext);
 
   return (
-    <div className="relative p-2">
+    <div className="relative p-2 text-sm">
       <div
         className={
-          `duration-200 absolute bg-slate-800 w-9 h-6 rounded-md ` +
-          (language === 'pl' ? `left-[16px]` : `left-[68px]`)
+          `duration-200 absolute bg-slate-800 w-8 h-7 rounded-md top-[4px] left-[17px] ` +
+          (language === 'pl' ? `` : `translate-x-[50px]`)
         }
       ></div>
       <button
