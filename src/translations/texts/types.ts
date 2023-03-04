@@ -1,6 +1,7 @@
 export type Texts = {
   appName: string;
-  welcome: string;
+  welcomeHeading: string;
+  welcomeText: string;
   forum: string;
   search: string;
   searchPlaceholder: string;

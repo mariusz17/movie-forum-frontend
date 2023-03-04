@@ -8,7 +8,9 @@ export const AppContainer = () => {
     <div>
       <AppHeader />
       <Navbar />
-      <Outlet />
+      <main className="flex items-center justify-center max-w-6xl p-2 mx-auto">
+        <Outlet />
+      </main>
     </div>
   );
 };

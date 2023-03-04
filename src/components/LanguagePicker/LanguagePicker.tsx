@@ -8,8 +8,8 @@ export const LanguagePicker = () => {
     <div className="relative flex items-center justify-center text-sm">
       <div
         className={
-          `duration-200 absolute bg-slate-800 w-8 h-7 rounded-md top-1/2 -translate-y-1/2 left-[9px]` +
-          (language === 'pl' ? `` : ` translate-x-[50px]`)
+          `duration-200 absolute bg-slate-800 w-8 h-7 rounded-md top-1/2 -translate-y-1/2 left-[10px]` +
+          (language === 'pl' ? `` : ` translate-x-[52px]`)
         }
       ></div>
       <button
