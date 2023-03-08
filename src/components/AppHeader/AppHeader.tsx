@@ -28,7 +28,9 @@ export const AppHeader = () => {
 
       <div className="flex items-center justify-center space-x-0 md:space-x-7">
         <LanguagePicker />
-        <FaUserAlt className="text-2xl cursor-pointer" />
+        <Link to="/profile">
+          <FaUserAlt className="text-2xl cursor-pointer" />
+        </Link>
       </div>
     </header>
   );

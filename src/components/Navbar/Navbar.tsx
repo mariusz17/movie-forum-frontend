@@ -71,7 +71,7 @@ export const Navbar = () => {
         </div>
 
         <Link
-          to="/"
+          to="/forum"
           className={
             'p-1 duration-500' + (isSearchHidden ? '' : ' -translate-x-28')
           }
@@ -93,7 +93,7 @@ export const Navbar = () => {
           {t('search')}
         </label>
         <Link
-          to="/"
+          to="/favourites"
           className={
             'p-1 duration-500' + (isSearchHidden ? '' : ' translate-x-28')
           }
