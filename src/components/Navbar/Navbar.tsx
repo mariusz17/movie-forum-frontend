@@ -73,7 +73,7 @@ export const Navbar = () => {
         <Link
           to="/forum"
           className={
-            'p-1 duration-500' + (isSearchHidden ? '' : ' -translate-x-28')
+            'p-1 duration-500' + (isSearchHidden ? '' : ' -translate-x-32')
           }
         >
           {t('forum')}
@@ -95,7 +95,7 @@ export const Navbar = () => {
         <Link
           to="/favourites"
           className={
-            'p-1 duration-500' + (isSearchHidden ? '' : ' translate-x-28')
+            'p-1 duration-500' + (isSearchHidden ? '' : ' translate-x-32')
           }
         >
           {t('favourites')}

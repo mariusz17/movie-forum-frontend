@@ -1,7 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ROUTES } from './routesMap';
 
+import { PrivateRoute } from '../components/PrivateRoute';
 import { Home } from '../pages/Home';
+import { SignIn } from '../pages/SignIn';
 import { Forum } from '../pages/Forum';
 import { Favourites } from '../pages/Favourites';
 import { Profile } from '../pages/Profile';
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: ROUTES.signIn,
+        element: <SignIn />,
+      },
+      {
         path: ROUTES.forum,
         element: <Forum />,
       },
@@ -25,8 +31,8 @@ const router = createBrowserRouter([
         element: <Favourites />,
       },
       {
-        path: ROUTES.profile,
-        element: <Profile />,
+        element: <PrivateRoute />,
+        children: [{ path: ROUTES.profile, element: <Profile /> }],
       },
     ],
   },
