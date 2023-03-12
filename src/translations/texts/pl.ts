@@ -9,7 +9,7 @@ export const PL: Texts = {
     użytkownika w prawym górnym rogu. Po zalogowaniu uzyskasz dostęp\
     do dyskusji na forum, możliwość oceniania wybranych produkcji oraz\
     dodawania ich do swojej listy ulubionych. Zawsze (bez logowania)\
-    możesz skorzystać z wyszukiwarki, która korzysta z darmowego\
+    możesz skorzystać z wyszukiwarki, która korzysta z\
     API themoviedb.org',
   forum: 'Forum',
   search: 'Wyszukaj',
