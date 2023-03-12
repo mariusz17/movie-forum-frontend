@@ -11,7 +11,7 @@ import { AppContainer } from '../components/AppContainer';
 
 const router = createBrowserRouter([
   {
-    path: ROUTES.home,
+    path: '/',
     element: <AppContainer />,
     children: [
       {
