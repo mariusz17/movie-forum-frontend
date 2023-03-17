@@ -8,7 +8,7 @@ export const AppContainer = () => {
     <div>
       <AppHeader />
       <Navbar />
-      <main className="flex items-center justify-center max-w-6xl p-2 mx-auto">
+      <main className="flex items-center justify-center max-w-6xl p-4 mx-auto">
         <Outlet />
       </main>
     </div>

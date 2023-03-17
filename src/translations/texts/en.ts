@@ -14,4 +14,10 @@ export const EN: Texts = {
   search: 'Search',
   searchPlaceholder: 'Search for movies and TV shows',
   favourites: 'Favourites',
+  username: 'Username',
+  email: 'Email',
+  password: 'Password',
+  repeatPassword: 'Repeat password',
+  signIn: 'Sign In',
+  register: 'Register',
 };

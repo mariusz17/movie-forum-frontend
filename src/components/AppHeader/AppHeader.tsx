@@ -1,14 +1,25 @@
-import { Link } from 'react-router-dom';
+import { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/Auth';
 import { LanguagePicker } from '../LanguagePicker';
 import { useTranslation } from '../../hooks/useTranslation';
+import { AuthModal } from '../AuthModal';
+import { ROUTES } from '../../routes/routesMap';
 import TmdbLogo from '../../assets/tmdb/tmdb-logo.svg';
 import { FaUserAlt } from 'react-icons/fa';
 
 export const AppHeader = () => {
+  const { state: authState } = useContext(AuthContext);
   const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const navigate = useNavigate();
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <header className="w-full flex items-center justify-between px-3 py-2 lg:p-3">
+      <AuthModal modalIsOpen={isModalOpen} closeModal={closeModal} />
       <div className="flex flex-col items-end -space-y-1 md:ml-40">
         <Link
           to="/"
@@ -28,9 +39,17 @@ export const AppHeader = () => {
 
       <div className="flex items-center justify-center space-x-0 md:space-x-7">
         <LanguagePicker />
-        <Link to="/profile">
-          <FaUserAlt className="text-2xl cursor-pointer" />
-        </Link>
+
+        <FaUserAlt
+          onClick={() => {
+            if (authState.user) {
+              navigate(ROUTES.profile);
+            } else {
+              openModal();
+            }
+          }}
+          className="text-2xl cursor-pointer"
+        />
       </div>
     </header>
   );

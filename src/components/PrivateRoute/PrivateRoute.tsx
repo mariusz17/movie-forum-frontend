@@ -1,7 +1,7 @@
 import { useContext } from 'react';
+import { Navigate } from 'react-router-dom';
 import { AuthContext } from '../../context/Auth';
-import { Outlet, Navigate } from 'react-router-dom';
-import { ROUTES } from '../../routes/routesMap';
+import { Outlet } from 'react-router-dom';
 
 export const PrivateRoute = () => {
   const { state: authState } = useContext(AuthContext);
@@ -9,6 +9,6 @@ export const PrivateRoute = () => {
   if (authState.user) {
     return <Outlet />;
   } else {
-    return <Navigate to={ROUTES.signIn} />;
+    return <Navigate to="/" />;
   }
 };

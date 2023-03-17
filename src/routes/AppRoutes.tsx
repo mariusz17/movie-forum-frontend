@@ -3,7 +3,6 @@ import { ROUTES } from './routesMap';
 
 import { PrivateRoute } from '../components/PrivateRoute';
 import { Home } from '../pages/Home';
-import { SignIn } from '../pages/SignIn';
 import { Forum } from '../pages/Forum';
 import { Favourites } from '../pages/Favourites';
 import { Profile } from '../pages/Profile';
@@ -17,10 +16,6 @@ const router = createBrowserRouter([
       {
         path: ROUTES.home,
         element: <Home />,
-      },
-      {
-        path: ROUTES.signIn,
-        element: <SignIn />,
       },
       {
         path: ROUTES.forum,

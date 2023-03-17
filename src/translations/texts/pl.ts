@@ -15,4 +15,10 @@ export const PL: Texts = {
   search: 'Wyszukaj',
   searchPlaceholder: 'Wyszukaj filmy i seriale',
   favourites: 'Ulubione',
+  username: 'Nazwa użytkownika',
+  email: 'Email',
+  password: 'Hasło',
+  repeatPassword: 'Powtórz hasło',
+  signIn: 'Zaloguj się',
+  register: 'Stwórz konto',
 };
